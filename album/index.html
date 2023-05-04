@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>アルバムアート取得する奴(YTMusic)</title>
+</head>
+<body>
+    <main>
+        <input type="text" id="urlInput" placeholder="URLを入力">
+        <button onclick="getImage()">Check</button>
+        <div id="img" class="disp"></div>
+    </main>
+    <script>
+        function getImage() {
+            var url = document.getElementById('urlInput').value;
+            var i_url = url.replace( 'w544-h544', 'w1200-h1200' );
+            document.getElementById('img').innerHTML = `<iframe src="${i_url}"><iframe>`;
+        }
+    </script>
+</body>
+</html>
